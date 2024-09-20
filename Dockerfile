@@ -7,8 +7,7 @@ WORKDIR /app
 # Sao chép Gradle build artifact vào container
 COPY build/libs/JavaApp-0.0.1.jar app.jar
 
-# Expose port 8080
 EXPOSE 8686
 
 # Command để chạy ứng dụng
-ENTRYPOINT ["nuhup", "java", "-jar", "app.jar", "&"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
