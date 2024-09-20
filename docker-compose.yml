@@ -8,4 +8,5 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://database-1.crc8iqka4vfd.ap-southeast-1.rds.amazonaws.com:3306/java_data
       - SPRING_DATASOURCE_USERNAME=admin
       - SPRING_DATASOURCE_PASSWORD=NU2Zy33d6Y1pCW0
-
+    volumes:
+      - ./data:/app/data

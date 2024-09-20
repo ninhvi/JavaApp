@@ -11,4 +11,4 @@ COPY build/libs/JavaApp-0.0.1.jar app.jar
 EXPOSE 8686
 
 # Command để chạy ứng dụng
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["nuhup", "java", "-jar", "app.jar", "&"]
