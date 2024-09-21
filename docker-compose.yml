@@ -11,6 +11,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=NU2Zy33d6Y1pCW0
   app:
     build: .
+    image: app:v3
     restart: always
     ports:
       - "8686:8686"
