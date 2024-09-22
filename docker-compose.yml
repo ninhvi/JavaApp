@@ -1,14 +1,5 @@
 version: '3'
 services:
-  db:
-    image: mysql
-    volumes:
-      - ./db/script/setup.sql:/docker-entrypoint-initdb.d/setup.sql
-      - api_db:/var/lib/mysql
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://database-1.crc8iqka4vfd.ap-southeast-1.rds.amazonaws.com:3306/java_data
-      - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=NU2Zy33d6Y1pCW0
   app:
     build: .
     image: app:v3
@@ -22,5 +13,6 @@ services:
     volumes:
       - ./data:/app/data
       - ./logs:/app/logs
+
 volumes:
   api_db:
